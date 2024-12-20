@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  },
   "devDependencies": {
     "concurrently": "^9.1.0"
   },
@@ -9,8 +12,5 @@
     "build:backend": "cd ./backend && npm install && npm run build",
     "build:frontend": "cd ./frontend && npm install && npm run build",
     "build": "npm run build:backend && npm run build:frontend"
-  },
-  "dependencies": {
-    "node-sass": "^9.0.0"
   }
 }
