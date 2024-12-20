@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "frontend/dist"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[functions]
+  directory = "backend/functions"
