@@ -1,0 +1,190 @@
+/* ProjectCard.css */
+.project-card {
+  position: relative;
+  width: 300px;
+  height: 190px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.collaborators {
+  position: absolute;
+  top: -15px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.collaborator-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: -8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.collaborator-avatar:hover {
+  transform: translateY(-4px);
+}
+
+.collaborator-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border:  3px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.collaborator-avatar:first-child {
+  margin-right: 0;
+}
+
+.menu-container {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.menu-button {
+  padding: 4px;
+  display: flex;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-button:hover {
+  background-color: #f3f4f6;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  color: #6b7280;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 8px;
+  width: 192px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.2s ease;
+  z-index: 10;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.menu-item:hover {
+  background-color: #f3f4f6;
+}
+
+.menu-item.delete {
+  color: #dc2626;
+}
+
+.item-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.project-name {
+  flex: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-name h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1f2937;
+  transition: color 0.2s ease;
+}
+
+.project-name:hover h3 {
+  color: #4b5563;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.add-project-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f2937;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-project-button:hover {
+  background-color: #374151;
+}
+
+.plus-icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

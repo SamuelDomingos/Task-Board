@@ -1,0 +1,134 @@
+/* UserProfile.css */
+
+.profile-page{
+  height:90vh;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .profile-header h1 {
+    font-size: 1.8rem;
+    color: #111827;
+    font-weight: 600;
+  }
+  
+  .user-id {
+    font-size: 0.875rem;
+    color: #6b7280;
+    padding: 4px 8px;
+    background-color: #f3f4f6;
+    border-radius: 4px;
+  }
+  
+  .profile-content {
+    display: flex;
+    gap: 48px;
+  }
+  
+  .profile-image-section {
+    flex-shrink: 0;
+  }
+  
+  .profile-image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f3f4f6;
+  }
+  
+  .image-upload-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-upload-button:hover {
+    background-color: #f3f4f6;
+    transform: scale(1.05);
+  }
+  
+  .hidden-input {
+    display: none;
+  }
+  
+  .profile-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .save-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 16px;
+  }
+  
+  .save-button:hover:not(.disabled) {
+    background-color: #2563eb;
+  }
+  
+  .save-button.disabled {
+    background-color: #e5e7eb;
+    cursor: not-allowed;
+    color: #9ca3af;
+  }
+
+  .profile-container .ButtonHome{
+    margin-bottom: 1em;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-image-container {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 24px;
+    }
+  }

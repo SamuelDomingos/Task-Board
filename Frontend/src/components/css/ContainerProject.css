@@ -1,0 +1,55 @@
+/* ProjectGrid.css */
+.projects-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    gap: 32px;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .add-project-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #f3f4f6;
+    border: 2px dashed #e5e7eb;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-project-button:hover {
+    background-color: #e5e7eb;
+    border-color: #d1d5db;
+  }
+  
+  .plus-icon {
+    width: 24px;
+    height: 24px;
+    color: #6b7280;
+  }
+  
+  .add-project-button span {
+    font-size: 1rem;
+    color: #374151;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1200px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }

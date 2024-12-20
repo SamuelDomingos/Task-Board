@@ -1,0 +1,62 @@
+
+.friend-request-container .search-container input{
+  padding-left: 2.5em;
+}
+
+.add-friend-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+}
+
+.add-friend-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.add-friend-button:active {
+  transform: scale(0.95);
+}
+
+.plus-icon {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.add-friend-button:hover .plus-icon {
+  transform: rotate(90deg);
+}
+
+.no-results {
+  text-align: center;
+  padding: 32px;
+  color: #6b7280;
+  animation: fadeIn 0.3s ease;
+}
+
+.user-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}

@@ -1,0 +1,50 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  z-index: 1001;
+  animation: modalSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+@keyframes modalSlideIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -40%) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

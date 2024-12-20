@@ -1,0 +1,85 @@
+/* Atualização do CSS existente */
+/* Container principal do modal agora com scroll */
+.project-form {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: calc(80vh - 100px); /* Altura máxima considerando o header */
+  overflow-y: auto;
+  padding-right: 16px; /* Espaço para o scrollbar */
+}
+
+/* Estilização do scrollbar */
+.project-form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-form::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.project-form::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.control-icon {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+/* Grid de colaboradores com scroll */
+.friends-grid {
+  display: grid;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.friends-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.friends-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.friends-grid::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.user-card .user-id {
+  background: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-label input.hidden {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+
+/* Seleção de colaborador melhorada */
+.user-card.selected {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.user-card.selected .user-name, .user-card.selected .user-id {
+  color: white;
+}

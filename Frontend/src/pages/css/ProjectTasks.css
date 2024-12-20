@@ -1,0 +1,249 @@
+.task-board {
+  width: 40%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.task-board-header {
+  margin-bottom: 2rem;
+}
+
+.task-board-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task-board-title svg {
+  color: #f6a53b;
+}
+
+.task-board-description {
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-card {
+  margin-top: 1rem;
+  padding: .7rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition-default);
+}
+
+.task-card .task-status{
+  width: 50px;
+  height: 50px;
+  padding: .7rem;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.task-card .task-status svg{
+  position: absolute;
+  background-color: #ffe0b277;
+  border-radius: 50%;
+  font-size: 13px;
+  color: #fff;
+  padding: 0.2em;
+  width: auto;
+  height: auto;
+}
+
+.task-card:hover {
+  background-color: #ffe0b2; /* Leve destaque ao passar o mouse */
+}
+
+/* Em processo */
+.task-card.em-processo {
+  background-color: #f5d566; /* Amarelo claro */
+}
+
+.task-card.em-processo:hover{
+  background-color: #f5cf46;
+}
+
+.task-card.em-processo .task-status{
+  background-color: #e8a13b;
+}
+
+.task-card.incompleto .task-status{
+ background-color: #dd524d;
+}
+
+/* Incompleto */
+.task-card.incompleto {
+  background-color: #f7d3d3; /* Vermelho claro */
+}
+
+.task-card.incompleto:hover{
+  background-color: #ff9c9c;
+}
+
+/* Completo */
+.task-card.completo {
+  background-color: #a1ecb1; /* Verde claro */
+}
+
+.task-card.completo .task-status{
+  background-color: #31d656;
+}
+
+.task-card.completo:hover{
+  background-color: #79eb91;
+}
+
+.task-card .task-icon {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.task-card .task-details {
+  flex-grow: 1;
+}
+
+.task-card .task-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.task-card .task-description {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.add-task-button {
+  margin-top: 1rem;
+  padding: .7rem;
+  border-radius: 12px;
+  background-color: #fff3e0;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+  width: 100%;
+  transition: var(--transition-default);
+}
+
+.add-task-button:hover {
+  background-color: #ffe0b2;
+}
+
+.add-task-button div {
+  background-color: #eaa23c;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-task-button div svg {
+  position: absolute;
+  background-color: #ffe0b277;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #fff;
+  padding: 0.5em;
+  width: auto;
+  height: auto;
+}
+
+.add-task-text {
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+/* Opções de status */
+.status-option {
+  height: 50px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  justify-content: left;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.status-option.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.status-option div{
+  width: 50px;
+  height: 100%;
+  border-radius: 10px;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+}
+
+.status-option div svg{
+  background-color: #ffe0b277;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #fff;
+  padding: 0.2em;
+  width: auto;
+  height: auto;
+}
+
+.status-option span{
+  margin-left: 1em;
+  font-weight: 600;
+}
+
+.status-option svg.check{
+  margin-left: auto;
+  margin-right: 1em;
+  font-size: 1.5em;
+  color: #3b82f6;
+}
+
+.status-option.process > div{
+  background-color: #eaa23c;
+}
+
+.status-option.not > div{
+  background-color: #dd524c;
+}
+
+.status-option.completed > div{
+  background-color: #32d757;
+}
+
+.delete-button {
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.delete-button:hover {
+  background-color: var(--danger-dark);
+}
