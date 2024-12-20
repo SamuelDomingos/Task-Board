@@ -9,8 +9,8 @@
     "start": "concurrently \"npm run backend\" \"npm run frontend\"",
     "backend": "cd backend && npm start",
     "frontend": "cd frontend && npm run dev",
- "build:backend": "cd ./Backend && npm install && npm run build",
-  "build:frontend": "cd ./Frontend && npm install && npm run build",
+ "build:backend": "cd Backend && npm install && npm run build",
+  "build:frontend": "cd Frontend && npm install && npm run build",
   "build": "npm run build:backend && npm run build:frontend"
   }
 }
